@@ -1,0 +1,145 @@
+<html>
+    <header>
+        <title>binah Images</title>
+        <link rel="stylesheet" href="assets/luminous-basic.min.css">
+        <style type="text/css">
+            body {
+                text-align: center;
+                font-family: Helvetica Neue, Arial, sans;
+                background: #FAFAFA;
+            }
+            section {
+                max-width: 32em;
+                margin: 0 auto;
+            }
+            h1 {
+                text-align: center;
+                color: #013C4A;
+                margin-top: 3em;
+                margin-bottom: 1em;
+            }
+            p {
+                max-width: 32em;
+                margin-bottom: 1em;
+                text-align: left;
+                color: #23637f;
+                line-height: 1.6em;
+            }
+            p:last-of-type {
+                margin-bottom: 2em;
+            }
+            a {
+                color: #00C0FA;
+            }
+            .zoom-in {
+                cursor: zoom-in;
+            }
+            a img {
+                max-width: 100%;
+            }
+            .gallery-root {
+                list-style: none;
+                text-align: center;
+                padding-left: 0;
+                margin-bottom: 36px;
+            }
+            .gallery-root li {
+                display: inline-block;
+                padding: 6px 6px;
+                animation-duration: 1s;
+                animation-name: fade;
+            }
+            @keyframes fade {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+            input[type="text"], button {
+                font-size: 16px;
+            }
+            hr {
+                border: 0;
+                height: 1px;
+                background: #000;
+                background-image: linear-gradient(to right, #ccc, #000, #ccc);
+            }
+            #logo {
+                height: 60px;
+                width: auto;
+                text-align: left;
+                padding-bottom: 6px;
+            }
+            .loader {
+                border: 16px solid #f3f3f3; 
+                border-top: 16px solid #3498db;
+                border-radius: 50%;
+                display: block;
+                visibility: hidden;
+                margin-left: auto;
+                margin-right: auto;
+                width: 80px;
+                height: 80px;
+                animation: spin 900ms linear infinite;
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        </style>
+    </header>
+    <body>
+        <span class="header">
+            <img src="assets/logo.svg" id="logo" alt="binah Logo">
+            <br>
+            <input onkeyup="invoke_query(event)" type="text" size="50" name="search">
+            <button type="submit" onclick="query()">Search</button>
+        </span>
+        <br><hr><br>
+        <ul class="gallery-root"></ul>
+        <div class="loader"></div>
+        <script src="assets/Luminous.min.js"></script>
+        <script>
+            function toggle_loading(visible) {
+                var loader = document.getElementsByClassName('loader')[0];
+                if (visible) {
+                    loader.style.visibility = 'visible';
+                } else {
+                    loader.style.visibility = 'hidden';
+                }
+            }
+            function createGallery(imgs) {
+                var gallery = document.getElementsByClassName('gallery-root')[0];
+                toggle_loading(false);
+                imgs.forEach(function(ele) {
+                    var li = document.createElement('li');
+                    var a = document.createElement('a');
+                    var img = document.createElement('img');
+                    img.src = 'thumbnails/' + ele;
+                    a.href = 'images/' + ele;
+                    a.className = 'gallery';
+                    a.appendChild(img);
+                    li.appendChild(a);
+                    gallery.appendChild(li);
+                });
+                new LuminousGallery(document.getElementsByClassName('gallery'));
+            }
+            function invoke_query(e) {
+                if (e.key === "Enter") {
+                    query();
+                }
+            }
+            function query() {
+                var gallery = document.getElementsByClassName('gallery-root')[0];
+                var prompt = document.getElementsByName('search')[0].value;
+                while (gallery.firstChild) gallery.removeChild(gallery.firstChild);
+                toggle_loading(true);
+                fetch('q/' + escape(prompt)).then(function (res) { 
+                    res.json().then(function(data) {
+                        createGallery(data);
+                    });
+                });
+            }
+            var imglist = [...Array(60).keys()].map(i => (i*18) + 1800);
+            createGallery(imglist);
+        </script>
+    </body>
+</html>

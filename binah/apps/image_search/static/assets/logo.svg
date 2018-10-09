@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<svg width="534" height="120" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g class="layer">
+  <polygon cx="188.5" cy="20.5" edge="13.872435" fill="#000000" id="svg_3" orient="x" points="59.11329650878906,17.936217308044434 47.09942626953125,24.872434616088867 47.09942626953125,11 59.11329650878906,17.936217308044434 " shape="regularPoly" sides="3" stroke="#000000" stroke-width="12" strokeWidth="12" strokecolor="#000000"/>
+  <circle cx="50.104048" cy="58.936216" fill="#000000" fill-opacity="0" id="svg_1" r="43.10405" stroke="#000000" stroke-width="12"/>
+  <polygon cx="188.5" cy="20.5" edge="13.872435" fill="#000000" id="svg_5" orient="x" points="55.1109 101.436 43.0972 108.372 43.0972 94.5 55.1109 101.436" shape="regularPoly" sides="3" stroke="#000000" stroke-width="12" strokeWidth="12" strokecolor="#000000" transform="rotate(-178.683 49.104 101.436)"/>
+  <text fill="#000000" font-family="Monospace" font-size="63" id="svg_10" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" x="327.10405" xml:space="preserve" y="76.936217">binah</text>
+ </g>
+</svg>
