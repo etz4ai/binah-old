@@ -1,9 +1,12 @@
-<?xml version="1.0"?>
-<svg width="534" height="120" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
- <g class="layer">
-  <polygon cx="188.5" cy="20.5" edge="13.872435" fill="#000000" id="svg_3" orient="x" points="59.11329650878906,17.936217308044434 47.09942626953125,24.872434616088867 47.09942626953125,11 59.11329650878906,17.936217308044434 " shape="regularPoly" sides="3" stroke="#000000" stroke-width="12" strokeWidth="12" strokecolor="#000000"/>
-  <circle cx="50.104048" cy="58.936216" fill="#000000" fill-opacity="0" id="svg_1" r="43.10405" stroke="#000000" stroke-width="12"/>
-  <polygon cx="188.5" cy="20.5" edge="13.872435" fill="#000000" id="svg_5" orient="x" points="55.1109 101.436 43.0972 108.372 43.0972 94.5 55.1109 101.436" shape="regularPoly" sides="3" stroke="#000000" stroke-width="12" strokeWidth="12" strokecolor="#000000" transform="rotate(-178.683 49.104 101.436)"/>
-  <text fill="#000000" font-family="Monospace" font-size="63" id="svg_10" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" x="327.10405" xml:space="preserve" y="76.936217">binah</text>
+<svg width="534" height="110" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="112" width="536" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path transform="rotate(90 77.7059783935547,55.7865219116211) " id="svg_4" d="m80.621307,9.286523c-20.689351,0 -38.184812,13.529915 -44.216179,32.212272l11.118061,0c5.543459,-12.820546 18.239433,-21.80358 33.098118,-21.831262c19.945379,0.034603 36.084388,16.173612 36.115531,36.115531c-0.031143,19.945379 -16.170152,36.084388 -36.115531,36.118991c-14.858685,-0.024222 -27.558119,-9.014176 -33.101578,-21.838183l-11.114601,0c6.034827,18.682356 23.526827,32.215732 44.219639,32.222653c25.672236,-0.006921 46.49654,-20.817384 46.500001,-46.500001c-0.006921,-25.686077 -20.831225,-46.49308 -46.503461,-46.500001zm-14.356936,60.773888l24.741405,-14.277348l-24.741405,-14.287729l0,7.948393l-37.977192,0l0,12.668292l37.977192,0l0,7.948393z" stroke-width="3" stroke="#000" fill="#000000"/>
+  <text font-weight="bold" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="72" id="svg_5" y="82.4375" x="140.5" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">Binah</text>
  </g>
 </svg>
