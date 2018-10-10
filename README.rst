@@ -38,3 +38,9 @@ Simply run:
 ::
 
     etz run search
+
+Inline documentation about other actions is available:
+
+::
+
+    etz -h
