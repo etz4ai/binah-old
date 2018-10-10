@@ -3,7 +3,7 @@ from binah.util import get_data_home
 from binah.model import Video, Example, Type, Lifecycle, License, Dataset
 import os
 
-PLAYLISTS = ['https://www.youtube.com/watch?v=wOeI7nRYUE4&list=PLrEnWoR732-DzkMlkGeDiTHga7ekWQrd2']
+PLAYLISTS = ['https://www.youtube.com/watch?v=-yOPQN19c98&list=PL9uNqONsJ8Q9hmgft3ZsDiObSAaoJG6e0']
 VIDEO_DIR = get_data_home() / 'videos'
 VIDEO_DIR.mkdir(parents=True, exist_ok=True)
 
