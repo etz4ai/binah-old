@@ -1,5 +1,4 @@
-Binah
-=====
+.. image:: binah/apps/image_search/static/assets/logo.svg
 
 Binah is a system for training multi-modal embeddings jointly. We develop
 an image embedding and a text embedding where objects of similar abstract 
