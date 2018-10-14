@@ -17,10 +17,11 @@ space.load(str(get_data_home() / 'vectors.tree'))
 
 graph = tf.Graph()
 with graph.as_default():
-    sess = tf.Session(config=tf.ConfigProto(device_count = {'GPU': 0}))
+    sess = tf.Session(config=tf.ConfigProto(device_count={'GPU': 0}))
     sess.as_default()
     str2vec = hub.Module(SENT_ENCODER)
     sess.run([tf.global_variables_initializer(), tf.tables_initializer()])
+
 
 @app.route('/q/<query>')
 async def text_query(request, query):
@@ -29,13 +30,15 @@ async def text_query(request, query):
     res = space.get_nns_by_vector(res[0], 60)
     return json(res)
 
+
 def main():
     script_dir = os.path.dirname(os.path.realpath(__file__))
-    app.static('', os.path.join(script_dir, 'static', 'index.html'))
-    app.static('/assets', os.path.join(script_dir, 'static', 'assets'))
+    app.static('', os.path.join(script_dir, 'dist', 'index.html'))
+    app.static('/assets', os.path.join(script_dir, 'dist', 'assets'))
     app.static('/images', str(get_data_home() / 'images'))
     app.static('/thumbnails', str(get_data_home() / 'thumbnails'))
     app.run(host='0.0.0.0', port=8080)
+
 
 if __name__ == '__main__':
     main()
