@@ -1,0 +1,90 @@
+body {
+  text-align: center;
+  font-family: Helvetica Neue, Arial, sans;
+  background: #fafafa;
+}
+section {
+  max-width: 32em;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+  color: #013c4a;
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+p {
+  max-width: 32em;
+  margin-bottom: 1em;
+  text-align: left;
+  color: #23637f;
+  line-height: 1.6em;
+}
+p:last-of-type {
+  margin-bottom: 2em;
+}
+a {
+  color: #00c0fa;
+}
+.zoom-in {
+  cursor: zoom-in;
+}
+a img {
+  max-width: 100%;
+}
+.gallery-root {
+  list-style: none;
+  text-align: center;
+  padding-left: 0;
+  margin-bottom: 36px;
+}
+.gallery-root li {
+  display: inline-block;
+  padding: 6px 6px;
+  animation-duration: 1s;
+  animation-name: fade;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+input[type='text'],
+button {
+  font-size: 16px;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background: #000;
+  background-image: linear-gradient(to right, #ccc, #000, #ccc);
+}
+#logo {
+  height: 60px;
+  width: auto;
+  text-align: left;
+  padding-bottom: 6px;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  display: block;
+  visibility: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+  height: 80px;
+  animation: spin 900ms linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
