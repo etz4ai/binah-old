@@ -3,7 +3,7 @@ import tensorflow_hub as hub
 from tensorflow.estimator import EstimatorSpec, Estimator, ModeKeys
 from tensorflow.estimator.export import ServingInputReceiver
 from tensorflow.train import AdamOptimizer, get_global_step
-from tensorflow.losses import mean_squared_error
+from tensorflow.losses import mean_pairwise_squared_error
 
 import numpy as np
 from sqlalchemy import text
@@ -100,7 +100,7 @@ def get_img2vec_fns(session, mode=ModeKeys.TRAIN):
         output = tf.layers.dense(model, VEC_SPACE_DIMENSIONS, activation=tf.nn.tanh)
 
         if mode == ModeKeys.TRAIN or mode == ModeKeys.EVAL:
-            loss = mean_squared_error(labels, output)
+            loss = mean_pairwise_squared_error(labels, output)
             regularizer = tf.get_collection(tf.GraphKeys.REGULARIZATION_LOSSES)
             loss = loss + 0.25 * sum(regularizer)
         if mode == ModeKeys.TRAIN:    
